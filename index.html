@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="icon" type="image/png" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+  </head>
+  <body>
+    <div class="main_container">
+      <div class="card_container">
+        <div class="front_card">
+          <img
+            class="card_img"
+            src="./images/bg-card-front.png"
+            alt="front card"
+          />
+          <div class="card_logo">
+            <img src="./images/card-logo.svg" alt="card logo" width="50px" />
+          </div>
+          <div class="card_number">0000 0000 0000 0000</div>
+          <div class="card_bottom_row">
+            <div class="card_holder">JANE APPLESEED</div>
+            <div class="card_expiry">00/00</div>
+          </div>
+        </div>
+        <div class="back_card">
+          <img
+            class="card_img"
+            src="./images/bg-card-back.png"
+            alt="back card"
+          />
+          <div class="cvc_display">000</div>
+        </div>
+      </div>
+      <form class="class_form">
+        <label for="cardholder">CARDHOLDER NAME</label>
+        <input type="text" id="cardholder" placeholder="e.g. Jane Appleseed" />
+        <small class="error"></small>
+
+        <label for="cardnumber">Card Number</label>
+        <input
+          type="text"
+          id="cardnumber"
+          placeholder="e.g. 1234 5678 9123 0000"
+        />
+        <small class="error"></small>
+
+        <div class="form_group_row">
+          <div class="exp_date">
+            <label for="exp-month">EXP. DATE (MM/YY)</label>
+            <div class="exp_inputs">
+              <input
+                type="text"
+                id="exp-month"
+                placeholder="MM"
+                maxlength="2"
+              />
+
+              <input type="text" id="exp-year" placeholder="YY" maxlength="2" />
+            </div>
+            <small class="error"></small>
+          </div>
+          <div class="cvc">
+            <label for="cvc">CVC</label>
+            <input type="text" id="cvc" placeholder="e.g. 123" maxlength="3" />
+            <small class="error"></small>
+          </div>
+        </div>
+        <button type="button" id="confirm_btn">Confirm</button>
+      </form>
+      <div class="complete_state hidden" id="complete_state">
+        <div class="complete_icon">
+          <img src="./images/icon-complete.svg" alt="complete_state" />
+        </div>
+        <h1>THANK YOU!</h1>
+        <p>We've added your card details</p>
+        <button>Continue</button>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
